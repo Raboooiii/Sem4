@@ -34,7 +34,6 @@ def list_operations():
 def dictionary_operations():
     print("\n--- Dictionary Operations ---")
 
-    # Get user input for the dictionary
     n = int(input("Enter the number of key-value pairs for the dictionary: "))
     my_dict = {}
     for _ in range(n):
