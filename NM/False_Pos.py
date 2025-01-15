@@ -1,4 +1,4 @@
-def false_position(f,a,b,tol = 1e-6, max_Iter=100):
+def false_position(f,a,b,tol = 1e-3, max_Iter=100):
     if f(a) * f(b) > 0:
         print("f(a) and f(b) should have different symbols")
         return None, 0
@@ -27,7 +27,7 @@ if __name__ == "__main__":
     func_str = input("Enter the function f(x) (use 'x' as the variable): ")
     a = float(input("Enter the start of the interval a: "))
     b = float(input("Enter the end of the interval b: "))
-    tol = float(input("Enter the desired tolerance (default 1e-6): ") or 1e-6)
+    tol = float(input("Enter the desired tolerance (default 1e-3): ") or 1e-3)
     max_iter = int(input("Enter the maximum number of iterations (default 100): ") or 100)
     
     def f(x):
@@ -36,4 +36,13 @@ if __name__ == "__main__":
     root, iterations = false_position(f, a, b, tol, max_iter)
     
     if root is not None:
-        print(f"Root found: {root:.6f} after {iterations} iterations")
+        print(f"Root found: {root:.3f} after {iterations} iterations")
+
+#Output
+
+#Enter the function f(x) (use 'x' as the variable): x**3-x**2+2
+#Enter the start of the interval a: -2
+#Enter the end of the interval b: 0
+#Enter the desired tolerance (default 1e-3): 
+#Enter the maximum number of iterations (default 100): 
+#Root found: -1.000 after 13 iterations
