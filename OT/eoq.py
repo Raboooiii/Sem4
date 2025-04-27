@@ -1,3 +1,5 @@
+import math
+
 def eoq():
     print("\nEconomic Order Quantity (EOQ) Calculator")
     print("---------------------------------------")
