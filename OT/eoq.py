@@ -4,13 +4,13 @@ def eoq():
     print("\nEconomic Order Quantity (EOQ) Calculator")
     print("---------------------------------------")
     
-    demand = float(input("Enter annual demand (units): "))
-    setup_cost = float(input("Enter ordering cost per order ($): "))
-    holding_cost = float(input("Enter holding cost per unit/year ($): "))
+    A = float(input("Enter annual demand (units): "))
+    B = float(input("Enter ordering cost per order ($): "))
+    C = float(input("Enter holding cost per unit/year ($): "))
 
-    q = math.sqrt((2 * demand * setup_cost) / holding_cost)
-    orders_per_year = demand / q
-    total_cost = (demand * setup_cost / q) + (holding_cost * q / 2)
+    q = math.sqrt((2 * A * B) / C)
+    orders_per_year = A / q
+    total_cost = (A * B / q) + (C * q / 2)
 
     print("\nResults:")
     print(f"Optimal Order Quantity (EOQ): {q:.2f} units")
